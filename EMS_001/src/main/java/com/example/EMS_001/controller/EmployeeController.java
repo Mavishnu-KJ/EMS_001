@@ -17,7 +17,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/api/employees/")
+@RequestMapping("/api/employees")
 public class EmployeeController {
 
     private EmployeeService employeeService;

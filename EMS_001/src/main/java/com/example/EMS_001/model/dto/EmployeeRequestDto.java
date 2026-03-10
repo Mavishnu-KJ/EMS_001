@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Positive;
 
 public class EmployeeRequestDto {
 
-    @NotBlank
+    @NotBlank(message = "name must not be blank/null")
     private String name;
     @Positive
     private int salary;
@@ -14,6 +14,18 @@ public class EmployeeRequestDto {
     private String department;
     @Email
     private String email;
+
+    //no-arg constructor needed for modelmapper
+    public EmployeeRequestDto(){
+
+    }
+
+    public EmployeeRequestDto(String name, int salary, String department, String email) {
+        this.name = name;
+        this.salary = salary;
+        this.department = department;
+        this.email = email;
+    }
 
     public String getName() {
         return name;

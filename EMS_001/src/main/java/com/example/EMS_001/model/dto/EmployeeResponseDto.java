@@ -8,6 +8,19 @@ public class EmployeeResponseDto {
     private String department;
     private String email;
 
+    //no-arg constructor needed for modelmapper
+    public EmployeeResponseDto() {
+
+    }
+
+    public EmployeeResponseDto(long id, String name, int salary, String department, String email) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        this.department = department;
+        this.email = email;
+    }
+
     public long getId() {
         return id;
     }
